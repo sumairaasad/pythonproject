@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 from pprint import pprint
 
-client = MongoClient("mongodb+srv://sumairaasad12:Behzad%40786@cluster0.uy7anfw.mongodb.net/")
+client = MongoClient("mongodb+srv://sumairaasad12:@cluster0.uy7anfw.mongodb.net/")
  
 #sample_training is the mongodb database
 mongoDB = client['leisurecenter']#   client.leisurecenter
