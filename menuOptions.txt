@@ -1,0 +1,9 @@
+The filflix Menu options.
+Enter:
+Enter:
+1. Print all Films.
+2. Add all Films.
+3. Update Films.
+4. Delete Films.
+5. Report.
+6. Exit the Films App.
