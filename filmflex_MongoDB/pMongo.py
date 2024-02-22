@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 from pprint import pprint
 
-client = MongoClient("mongodb+srv://sumairaasad12:Behzad%40786@cluster0.uy7anfw.mongodb.net/")
+client = MongoClient("mongodb+srv://sumairaasad12:@cluster0.uy7anfw.mongodb.net/")
 
 #sample_training is the mongodb database
 mongoDB = client['leisurecenter']#   client.leisurecenter
@@ -32,22 +32,22 @@ print("\n Inser single doc\n")
 # pprint(addDoc.inserted_id)
 
 print("\n Insert multiple documents\n")
-# documents = [ 
-#     {'CourseID':133, 'MemberID':110},
-#     {'CourseID':210, 'MemberID':110},
-#     {'CourseID':212, 'MemberID':102}]
-# addDocs = dbMongoClient.insert_many(documents)
-# print(addDocs.inserted_ids)
+documents = [ 
+    {'CourseID':133, 'MemberID':110},
+    {'CourseID':210, 'MemberID':110},
+    {'CourseID':212, 'MemberID':102}]
+addDocs = dbMongoClient.insert_many(documents)
+print(addDocs.inserted_ids)
     
     #client.close() #close the connection
 
 print ("\nupdate single document\n")
-# updateDoc = dbMongoClient.update_one({'CourseID':212,},{'$set':{"MembersID":2500}})
-# print(updateDoc.modified_count)
+updateDoc = dbMongoClient.update_one({'CourseID':212,},{'$set':{"MembersID":2500}})
+print(updateDoc.modified_count)
 
 print ("\nupdate multiple documents\n")
-# updateDoc = dbMongoClient.update_many({'MemberID':19,},{'$set':{'CourseID':211}})
-# print(f"The number of update documents:{updateDoc.modified_count}")
+updateDoc = dbMongoClient.update_many({'MemberID':19,},{'$set':{'CourseID':211}})
+print(f"The number of update documents:{updateDoc.modified_count}")
 
 print("\nDelete single document\n")
 # deleteOne = dbMongoClient.delete_one({'CourseID': 270})
